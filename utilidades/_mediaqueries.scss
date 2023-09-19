@@ -4,7 +4,26 @@
         font-size: 0.8em;
     }
 
-    @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
+
+    .contenedor-galeria {
+        display: flex !important;
+        flex-direction: column;
+
+
+        .img-item {
+            img {
+                @include sizes(100%, 100%);
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+
+    }
+
 
         .galeria-title, .ciudad-title, .p-ciudad, .titulos {
             font-size: 20px;
@@ -60,21 +79,7 @@
 
 
 
-        .contenedor-galeria {
-            display: flex;
-            flex-direction: column;
-
-
-            .img-item {
-                img {
-                    @include sizes(100%, 100%);
-                    border-radius: 10px;
-                    object-fit: cover;
-                }
-            }
-
-
-        }
+        
 
     }
     .pic-container {
@@ -91,4 +96,3 @@
             }
         }
     }
-}

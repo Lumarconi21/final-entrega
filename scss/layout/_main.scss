@@ -330,6 +330,8 @@ body {
                 img {
                     object-fit: cover;
                     margin: 15px;
+                    width:100px;
+                    height:100px;
                 }
             }
 
@@ -373,5 +375,24 @@ body {
 
             }
         }
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    .contenedor-galeria {
+        display: flex !important;
+        flex-direction: column;
+
+
+        .img-item {
+            img {
+                @include sizes(100%, 100%);
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+
     }
 }

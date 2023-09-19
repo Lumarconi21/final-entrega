@@ -9,7 +9,18 @@
     font-size: 0.8em;
   }
 }
-@media screen and (max-width: 992px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .contenedor-galeria {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .contenedor-galeria .img-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .galeria-title, .ciudad-title, .p-ciudad, .titulos {
     font-size: 20px;
     font-weight: regular;
@@ -45,62 +56,22 @@
     height: 50%;
   }
   .formulario .form {
-    object-fit: cover;
-  }
-  .contenedor-galeria {
-    display: flex;
-    flex-direction: column;
-  }
-  .contenedor-galeria .img-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
-@media screen and (max-width: 992px) {
-  .pic-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .pic-container img {
-    width: 400px;
-    height: 400px;
-  }
-  .pic-container img:hover {
-    filter: grayscale(50%);
-  }
-  section .contenedor-ciudad {
-    display: flex;
-    flex-direction: column;
-  }
-  section .contenedor-ciudad h2 {
-    display: block;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #FF6969;
-    margin-top: 40px;
-  }
-  section .contenedor-ciudad .texto-item {
-    display: flex;
-    justify-content: center;
-  }
-  section .contenedor-ciudad .texto-item .info {
-    color: #8CC0DE;
-    font-size: 1.2em;
-    margin: 20px;
-  }
-  section .contenedor-ciudad div {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-  }
-  section .contenedor-ciudad div .foto-ciudad {
-    width: 500px;
-    height: 500px;
-  }
+.pic-container {
+  display: flex;
+  flex-direction: column;
 }
+.pic-container img {
+  width: 400px;
+  height: 400px;
+}
+.pic-container img:hover {
+  filter: grayscale(50%);
+}
+
 header .navbar {
   background-image: linear-gradient(#8CC0DE, #b5cede);
   display: flex;
@@ -147,7 +118,8 @@ body main div .green {
 body main .container .nyhavn {
   width: 98%;
   height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 20px 10px;
   padding: 10px 5px;
 }
@@ -265,7 +237,8 @@ body .contenedor-galeria .img-item img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .contenedor-galeria .full-width {
   grid-column: span 3;
@@ -316,7 +289,8 @@ body .contenedor-mayor .contenedor-padre .contenedor-texto .info {
 body .contenedor-mayor .contenedor-padre .foto-item {
   width: 500px;
   height: 700px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .fotos-cope {
   display: flex;
@@ -345,9 +319,11 @@ body section .logos a:hover {
   filter: white;
 }
 body section .logos a img {
-  object-fit: cover;
-  width:100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 15px;
+  width: 100px;
+  height: 100px;
 }
 body section .contenedor-ciudad {
   display: flex;
@@ -380,10 +356,21 @@ body section .contenedor-ciudad div .foto-ciudad {
   height: 500px;
 }
 
+@media screen and (max-width: 600px) {
+  .contenedor-galeria {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .contenedor-galeria .img-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 footer {
   color: #8CC0DE;
   font-size: 15px;
   margin-top: 100px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
