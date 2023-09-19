@@ -105,7 +105,8 @@ body {
         // Estilos de Contacto //
         .contacto {
             @extend .red;
-
+            font-size: 1rem;
+            color: $color-coral;
 
         }
 

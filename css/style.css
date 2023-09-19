@@ -163,6 +163,10 @@ body main .pic-container img {
 body main .pic-container img:hover {
   filter: grayscale(50%);
 }
+body main .contacto {
+  font-size: 1rem;
+  color: #FF6969;
+}
 body main div .form {
   margin: 0 auto;
   margin-top: 20px;
