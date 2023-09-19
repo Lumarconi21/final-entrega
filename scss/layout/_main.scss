@@ -1,0 +1,377 @@
+body {
+    background-image: radial-gradient(#f3e9b2, #f0ebd1);
+    font-family: "montserrat";
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    main {
+
+        // Estilos de Inicio //
+        // Titulos //
+        div {
+            .red {
+                color: $color-celeste;
+                font-weight: bold;
+                font-size: 3em;
+                margin-top: 50px;
+                text-align: center;
+            }
+
+            .green {
+                color: $color-coral;
+                font-weight: regular;
+                font-size: 2em;
+                text-align: center;
+            }
+        }
+
+        // Foto principal //
+        .container {
+            .nyhavn {
+                @include sizes(98%, 500px);
+                object-fit: cover;
+                margin: 20px 10px;
+                padding: 10px 5px;
+            }
+
+
+        }
+
+        .texto-principal {
+
+            margin: 70px 70px 20px, 70px;
+            padding: 50px;
+
+
+            p {
+                color: $color-celeste;
+                font-size: 1.5em;
+                font-weight: bold;
+                text-align: justify;
+                padding: 60px;
+            }
+        }
+
+
+
+        // Estilos de Como Moverse //
+        //Titulo//
+        .como-moverse {
+            @extend .red;
+            margin: 50px;
+        }
+
+        //Subtitulos//
+        h2 {
+            @extend .red;
+            font-size: 1.5em;
+
+        }
+
+        p {
+            color: $color-celeste;
+            font-size: 20px;
+            padding: 30px;
+            margin: 0px, 50px;
+
+            a {
+                text-decoration: underline;
+                color: $color-coral;
+                font-weight: bold;
+            }
+        }
+
+        .pic-container {
+            margin: 20px;
+            display: flex;
+            flex: 1;
+            gap: 3em;
+            margin: 2em;
+            justify-content: space-evenly;
+
+            img {
+
+                @include sizes(400px, 400px);
+
+                &:hover {
+                    filter: grayscale(50%)
+                }
+            }
+        }
+
+
+        // Estilos de Contacto //
+        .contacto {
+            @extend .red;
+
+
+        }
+
+        // Formulario //
+        div {
+            .form {
+                margin: 0 auto;
+                margin-top: 20px;
+                width: 550px;
+                border: 1px solid $color-coral;
+                border-radius: 5px;
+                background-color: #d9ebf5ee;
+
+                ul {
+                    list-style: none;
+                    padding: 1rem;
+                    margin: 0;
+                    color: $color-coral;
+
+                    li {
+                        display: flex;
+                        gap: 2em;
+
+                        label {
+                            display: flex;
+                            width: 100px;
+                            text-align: right;
+                            padding: 1rem;
+
+                        }
+
+                        input {
+                            display: flex;
+                            margin-top: 1em;
+                        }
+
+                        textarea {
+                            vertical-align: top;
+                            margin-top: 1em;
+                        }
+                    }
+
+                    .conditions {
+                        margin-top: 1rem;
+                        text-align: right;
+                    }
+
+                    //Botones del fomulario //
+                    .botones {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 20px;
+                        margin: 10px 20px;
+
+                        .boton {
+                            padding: 5px 10px;
+                            background-color: $color-coral;
+                            border: bisque solid 1px;
+                            color: bisque;
+                            border-radius: 5px;
+
+                            &:hover {
+                                opacity: 0.5;
+
+                            }
+                        }
+
+                        .reset {
+                            color: $color-coral;
+                            background-color: rgb(230, 230, 230);
+                            border: coral solid 1px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+
+        
+    }
+
+
+
+    // Estilos de Galeria //
+    .galeria-title {
+        @extend .franco;
+        color: $color-celeste;
+        margin-top: 30px;
+    }
+
+    // Grid fotos //
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 3rem 2rem;
+
+        .img-item {
+            img {
+                @include sizes(100%, 100%);
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+        .full-width {
+            grid-column: span 3;
+        }
+    }
+
+    // Estilos de La Ciudad //
+    .ciudad-title {
+        @extend .franco;
+        color: $color-celeste;
+        margin-top: 50px;
+        margin-right: 80px;
+
+    }
+
+    .p-ciudad {
+        @extend .red;
+        font-weight: bolder;
+        margin: 20px 80px;
+
+    }
+    
+
+    // Estilos de Que Visitar //
+    .aqua {
+        @extend .franco;
+        color: $color-celeste;
+        font-size: 2,5rem;
+        margin-top: 50px;
+
+
+    }
+
+    // Iframe Mapa Google //
+    .mapa {
+        display: flex;
+        justify-content: center;
+        margin: 50px;
+    }
+
+    .contenedor-mayor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 80%;
+        margin: auto;
+       
+
+        .contenedor-padre {
+            @extend .contenedor-mayor;
+            align-items: center;
+            height: 100%;
+
+            .contenedor-texto {
+                margin: 20px;
+
+
+                .titulos {
+                    @extend .red;
+                    color: $color-coral;
+                    margin-top: 30px;
+
+                }
+
+                .info {
+                    color: $color-celeste;
+                    font-size: 1.7rem;
+                    margin: 10px;
+
+                }
+            }
+
+            .foto-item {
+                width: 500px;
+                height: 700px;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    // Fotos bottom index //
+    .fotos-cope {
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        margin-top: 70px;
+        flex-wrap: wrap;
+        gap: 1em;
+        opacity: 0.9;
+
+        .noche {
+            @include sizes(380px, 350px);
+            margin-left: 85px;
+        }
+
+
+    }
+
+    //Logos redes sociales en Contacto//
+    section {
+        .logos {
+            display: flex;
+            height: 80px;
+            justify-content: center;
+            margin-top: 30px;
+
+            a {
+                width: 75px;
+
+                &:hover {
+                    filter: white;
+                }
+
+                img {
+                    object-fit: cover;
+                    margin: 15px;
+                }
+            }
+
+        }
+    }
+    //Contenido section de La Ciudad//
+    section {
+        .contenedor-ciudad {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                display: block;
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                color: $color-coral;
+                margin-top: 40px;
+            }
+
+            .texto-item {
+                display: flex;
+                justify-content: center;
+
+
+                .info {
+                    color: $color-celeste;
+                    font-size: 1.2em;
+                    margin: 20px;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                margin: 30px;
+
+                .foto-ciudad {
+                    @include sizes(500px, 500px);
+                }
+
+            }
+        }
+    }
+}

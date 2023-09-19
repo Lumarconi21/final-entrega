@@ -1,0 +1,37 @@
+header {
+    .navbar {
+        background-image: linear-gradient($color-celeste, #b5cede);
+        display: flex;
+        gap: 1rem;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin: 0;
+
+        .container-fluid {
+
+            div {
+                ul {
+                    gap: 3em;
+                    margin: auto;
+
+                    li {
+
+
+                        a {
+                            color: whitesmoke;
+                            font-size: 1.2em;
+                            font-weight: bold;
+
+                            &:hover {
+                                text-decoration: underline;
+                                color: $color-coral;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
