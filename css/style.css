@@ -303,8 +303,8 @@ body .fotos-cope .noche {
 }
 body section .logos {
   display: flex;
-  height: 80px;
   justify-content: center;
+  gap: 5%;
   margin-top: 30px;
 }
 body section .logos a {
@@ -316,8 +316,7 @@ body section .logos a:hover {
 body section .logos a img {
   object-fit: cover;
   margin: 15px;
-  width: 100px;
-  height: 100px;
+  width: 100%;
 }
 body section .contenedor-ciudad {
   display: flex;
