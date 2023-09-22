@@ -59,13 +59,15 @@ body {
         // Estilos de Como Moverse //
         //Titulo//
         .como-moverse {
-            @extend .red;
+            @extend .franco;
+            color: $color-celeste;
             margin: 50px;
         }
 
         //Subtitulos//
         h2 {
-            @extend .red;
+            @extend .franco;
+            color: $color-coral;
             font-size: 1.5em;
 
         }
@@ -80,12 +82,16 @@ body {
                 text-decoration: underline;
                 color: $color-coral;
                 font-weight: bold;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
 
         .pic-container {
             margin: 20px;
             display: flex;
+            flex-direction: row-reverse;
             flex: 1;
             gap: 3em;
             margin: 2em;
@@ -103,15 +109,16 @@ body {
 
 
         // Estilos de Contacto //
-        .contacto {
-            @extend .red;
-            font-size: 1rem;
-            color: $color-coral;
+    .formulario {
+            .contacto {
+                @extend .red;
+                font-size: 1.5rem;
+                
 
-        }
+            }
 
-        // Formulario //
-        div {
+            // Formulario //
+
             .form {
                 margin: 0 auto;
                 margin-top: 20px;
@@ -170,6 +177,7 @@ body {
 
                             &:hover {
                                 opacity: 0.5;
+                                cursor: pointer;
 
                             }
                         }
@@ -177,7 +185,7 @@ body {
                         .reset {
                             color: $color-coral;
                             background-color: rgb(230, 230, 230);
-                            border: coral solid 1px;
+                            border: $color-coral 1px;
                         }
                     }
 
@@ -187,7 +195,7 @@ body {
 
 
 
-        
+
     }
 
 
@@ -234,13 +242,13 @@ body {
         margin: 20px 80px;
 
     }
-    
+
 
     // Estilos de Que Visitar //
     .aqua {
         @extend .franco;
         color: $color-celeste;
-        font-size: 2,5rem;
+        font-size: 2.5rem;
         margin-top: 50px;
 
 
@@ -254,13 +262,11 @@ body {
     }
 
     .contenedor-mayor {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-content: center;
         width: 80%;
         margin: auto;
-       
+        @include columna-flex;
+
 
         .contenedor-padre {
             @extend .contenedor-mayor;
@@ -272,7 +278,7 @@ body {
 
 
                 .titulos {
-                    @extend .red;
+                    @extend .franco;
                     color: $color-coral;
                     margin-top: 30px;
 
@@ -280,15 +286,14 @@ body {
 
                 .info {
                     color: $color-celeste;
-                    font-size: 1.7rem;
+                    font-size: 1.3rem;
                     margin: 10px;
 
                 }
             }
 
             .foto-item {
-                width: 500px;
-                height: 700px;
+                @include sizes(500px,700px);
                 object-fit: cover;
             }
         }
@@ -298,11 +303,10 @@ body {
     // Fotos bottom index //
     .fotos-cope {
         display: flex;
-        flex: 1;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-top: 70px;
         flex-wrap: wrap;
-        gap: 1em;
+        gap: 1rem;
         opacity: 0.9;
 
         .noche {
@@ -322,7 +326,7 @@ body {
             margin-top: 30px;
 
             a {
-                width: 75px;
+                width: 50px;
 
                 &:hover {
                     filter: white;
@@ -331,25 +335,24 @@ body {
                 img {
                     object-fit: cover;
                     margin: 15px;
-                    width:100%;
+                    width: 100%;
                 }
             }
 
         }
-    }
-    //Contenido section de La Ciudad//
-    section {
+    
+
+        //Contenido section de La Ciudad//
+    
         .contenedor-ciudad {
-            display: flex;
-            flex-direction: column;
+            @include columna-flex;
 
             h2 {
                 display: block;
-                text-align: center;
                 font-size: 2em;
-                font-weight: bold;
                 color: $color-coral;
                 margin-top: 40px;
+                @extend .franco;
             }
 
             .texto-item {
@@ -377,5 +380,3 @@ body {
         }
     }
 }
-
-

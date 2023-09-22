@@ -7,7 +7,14 @@
 }
 
 @media screen and (max-width: 600px) {
-
+    .formulario{
+        text-wrap: balance;
+        max-width: 100vw;
+        margin:auto;
+        .form{
+            max-width: 90%;
+        }   
+}
     .contenedor-galeria {
         display: flex !important;
         flex-direction: column;
@@ -25,9 +32,10 @@
     }
 
 
-        .galeria-title, .ciudad-title, .p-ciudad, .titulos {
-            font-size: 20px;
+        .galeria-title, .ciudad-title, .p-ciudad, .titulos, .contacto {
+            font-size: 1rem;
             font-weight: regular;
+            text-align: center;
         }
 
 
@@ -36,9 +44,16 @@
         }
 
         .info {
-            font-size: 1rem;
+            font-size: 0.7rem;
+            color: $color-coral;
+            text-align: center;
         }
 
+        .foto-item{
+            width: 150px;
+            height: 200px;
+        
+        }
         .texto-item {
             h2 {
                 font-size: 1em;
@@ -66,19 +81,6 @@
                 display: none;
             }
         }
-
-        .formulario {
-            width: 50%;
-            height: 50%;
-
-            .form {
-                object-fit: cover;
-
-            }
-        }
-
-
-
         
 
     }

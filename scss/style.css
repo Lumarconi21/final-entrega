@@ -1,4 +1,4 @@
-.franco, footer, body .aqua, body .ciudad-title, body .galeria-title {
+.franco, footer, body section .contenedor-ciudad h2, body .contenedor-mayor .contenedor-padre .contenedor-texto .titulos, body .aqua, body .ciudad-title, body .galeria-title, body main h2, body main .como-moverse {
   font-weight: bold;
   text-align: center;
 }
@@ -10,6 +10,13 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .formulario {
+    max-width: 100%;
+    margin: 0;
+  }
+  .formulario .form {
+    width: 80%;
+  }
   .contenedor-galeria {
     display: flex !important;
     flex-direction: column;
@@ -21,15 +28,22 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .galeria-title, .ciudad-title, .p-ciudad, .titulos {
-    font-size: 20px;
+  .galeria-title, .ciudad-title, .p-ciudad, .titulos, .contacto {
+    font-size: 1rem;
     font-weight: regular;
+    text-align: center;
   }
   .p-ciudad {
     text-align: left;
   }
   .info {
-    font-size: 1rem;
+    font-size: 0.7rem;
+    color: #FF6969;
+    text-align: center;
+  }
+  .foto-item {
+    width: 150px;
+    height: 200px;
   }
   .texto-item h2 {
     font-size: 1em;
@@ -50,14 +64,6 @@
   }
   .contenedor-ciudad .foto-ciudad {
     display: none;
-  }
-  .formulario {
-    width: 50%;
-    height: 50%;
-  }
-  .formulario .form {
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .pic-container {
@@ -102,7 +108,7 @@ body {
   width: 100%;
   height: 100%;
 }
-body main div .red, body main div .contenedor-mayor .contenedor-padre .contenedor-texto .titulos, body .contenedor-mayor .contenedor-padre .contenedor-texto main div .titulos, body main div .p-ciudad, body main div .contacto, body main div h2, body main div .como-moverse {
+body main div .red, body main div .p-ciudad, body main div .formulario .contacto, body main .formulario div .contacto {
   color: #8CC0DE;
   font-weight: bold;
   font-size: 3em;
@@ -135,9 +141,11 @@ body main .texto-principal p {
   padding: 60px;
 }
 body main .como-moverse {
+  color: #8CC0DE;
   margin: 50px;
 }
 body main h2 {
+  color: #FF6969;
   font-size: 1.5em;
 }
 body main p {
@@ -151,9 +159,13 @@ body main p a {
   color: #FF6969;
   font-weight: bold;
 }
+body main p a:hover {
+  cursor: pointer;
+}
 body main .pic-container {
   margin: 20px;
   display: flex;
+  flex-direction: row-reverse;
   flex: 1;
   gap: 3em;
   margin: 2em;
@@ -166,7 +178,10 @@ body main .pic-container img {
 body main .pic-container img:hover {
   filter: grayscale(50%);
 }
-body main div .form {
+body main .formulario .contacto {
+  font-size: 1.5rem;
+}
+body main .formulario .form {
   margin: 0 auto;
   margin-top: 20px;
   width: 550px;
@@ -174,54 +189,55 @@ body main div .form {
   border-radius: 5px;
   background-color: rgba(217, 235, 245, 0.9333333333);
 }
-body main div .form ul {
+body main .formulario .form ul {
   list-style: none;
   padding: 1rem;
   margin: 0;
   color: #FF6969;
 }
-body main div .form ul li {
+body main .formulario .form ul li {
   display: flex;
   gap: 2em;
 }
-body main div .form ul li label {
+body main .formulario .form ul li label {
   display: flex;
   width: 100px;
   text-align: right;
   padding: 1rem;
 }
-body main div .form ul li input {
+body main .formulario .form ul li input {
   display: flex;
   margin-top: 1em;
 }
-body main div .form ul li textarea {
+body main .formulario .form ul li textarea {
   vertical-align: top;
   margin-top: 1em;
 }
-body main div .form ul .conditions {
+body main .formulario .form ul .conditions {
   margin-top: 1rem;
   text-align: right;
 }
-body main div .form ul .botones {
+body main .formulario .form ul .botones {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   margin: 10px 20px;
 }
-body main div .form ul .botones .boton {
+body main .formulario .form ul .botones .boton {
   padding: 5px 10px;
   background-color: #FF6969;
   border: bisque solid 1px;
   color: bisque;
   border-radius: 5px;
 }
-body main div .form ul .botones .boton:hover {
+body main .formulario .form ul .botones .boton:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
-body main div .form ul .botones .reset {
+body main .formulario .form ul .botones .reset {
   color: #FF6969;
   background-color: rgb(230, 230, 230);
-  border: coral solid 1px;
+  border: #FF6969 1px;
 }
 body .galeria-title {
   color: #8CC0DE;
@@ -254,7 +270,7 @@ body .p-ciudad {
 }
 body .aqua {
   color: #8CC0DE;
-  font-size: 2, 5rem;
+  font-size: 2.5rem;
   margin-top: 50px;
 }
 body .mapa {
@@ -263,12 +279,12 @@ body .mapa {
   margin: 50px;
 }
 body .contenedor-mayor, body .contenedor-mayor .contenedor-padre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-content: center;
   width: 80%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 body .contenedor-mayor .contenedor-padre {
   align-items: center;
@@ -283,7 +299,7 @@ body .contenedor-mayor .contenedor-padre .contenedor-texto .titulos {
 }
 body .contenedor-mayor .contenedor-padre .contenedor-texto .info {
   color: #8CC0DE;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   margin: 10px;
 }
 body .contenedor-mayor .contenedor-padre .foto-item {
@@ -294,11 +310,10 @@ body .contenedor-mayor .contenedor-padre .foto-item {
 }
 body .fotos-cope {
   display: flex;
-  flex: 1;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 70px;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 1rem;
   opacity: 0.9;
 }
 body .fotos-cope .noche {
@@ -308,12 +323,12 @@ body .fotos-cope .noche {
 }
 body section .logos {
   display: flex;
-  height: 80px;
   justify-content: center;
+  gap: 5%;
   margin-top: 30px;
 }
 body section .logos a {
-  width: 75px;
+  width: 50px;
 }
 body section .logos a:hover {
   filter: white;
@@ -322,18 +337,16 @@ body section .logos a img {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 15px;
-  width: 100px;
-  height: 100px;
+  width: 100%;
 }
 body section .contenedor-ciudad {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 body section .contenedor-ciudad h2 {
   display: block;
-  text-align: center;
   font-size: 2em;
-  font-weight: bold;
   color: #FF6969;
   margin-top: 40px;
 }
@@ -356,19 +369,6 @@ body section .contenedor-ciudad div .foto-ciudad {
   height: 500px;
 }
 
-@media screen and (max-width: 600px) {
-  .contenedor-galeria {
-    display: flex !important;
-    flex-direction: column;
-  }
-  .contenedor-galeria .img-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
 footer {
   color: #8CC0DE;
   font-size: 15px;
