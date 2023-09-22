@@ -31,6 +31,7 @@ body {
       .nyhavn {
         @include sizes(98%, 500px);
         object-fit: cover;
+        border-radius: 10px;
         margin: 20px 10px;
         padding: 10px 5px;
       }
@@ -89,10 +90,6 @@ body {
       img {
         max-width: 350px;
         border-radius: 5px;
-
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
 
@@ -162,7 +159,7 @@ body {
               border-radius: 5px;
 
               &:hover {
-                opacity: 0.5;
+                transform: scale(1.2);
                 cursor: pointer;
               }
             }
@@ -265,6 +262,9 @@ body {
         @include sizes(500px, 700px);
         object-fit: cover;
         border-radius: 5px;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -299,14 +299,13 @@ body {
       a {
         width: 50px;
 
-        &:hover {
-          filter: white;
-        }
-
         img {
           object-fit: cover;
           margin: 15px;
           width: 100%;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -342,6 +341,7 @@ body {
 
         .foto-ciudad {
           @include sizes(500px, 500px);
+          border-radius: 5px;
           &:hover {
             transform: scale(1.2);
           }

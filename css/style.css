@@ -141,6 +141,7 @@ body main .container .nyhavn {
   width: 98%;
   height: 500px;
   object-fit: cover;
+  border-radius: 10px;
   margin: 20px 10px;
   padding: 10px 5px;
 }
@@ -186,9 +187,6 @@ body main .pic-container {
 body main .pic-container img {
   max-width: 350px;
   border-radius: 5px;
-}
-body main .pic-container img:hover {
-  transform: scale(1.1);
 }
 body main .formulario .contacto {
   font-size: 1.5rem;
@@ -244,7 +242,7 @@ body main .formulario .form ul .botones .boton {
   border-radius: 5px;
 }
 body main .formulario .form ul .botones .boton:hover {
-  opacity: 0.5;
+  transform: scale(1.2);
   cursor: pointer;
 }
 body main .formulario .form ul .botones .reset {
@@ -320,6 +318,9 @@ body .contenedor-mayor .contenedor-padre .foto-item {
   object-fit: cover;
   border-radius: 5px;
 }
+body .contenedor-mayor .contenedor-padre .foto-item:hover {
+  transform: scale(1.1);
+}
 body .fotos-cope {
   display: flex;
   justify-content: center;
@@ -346,13 +347,13 @@ body section .logos {
 body section .logos a {
   width: 50px;
 }
-body section .logos a:hover {
-  filter: white;
-}
 body section .logos a img {
   object-fit: cover;
   margin: 15px;
   width: 100%;
+}
+body section .logos a img:hover {
+  transform: scale(1.2);
 }
 body section .contenedor-ciudad {
   display: flex;
@@ -382,6 +383,7 @@ body section .contenedor-ciudad div {
 body section .contenedor-ciudad div .foto-ciudad {
   width: 500px;
   height: 500px;
+  border-radius: 5px;
 }
 body section .contenedor-ciudad div .foto-ciudad:hover {
   transform: scale(1.2);
