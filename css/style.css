@@ -10,6 +10,12 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .contenedor-texto .titulos .info {
+    text-align: justify;
+  }
+  .fotos-cope {
+    flex-direction: column;
+  }
   .formulario {
     text-wrap: balance;
     max-width: 100vw;
@@ -28,7 +34,12 @@
     border-radius: 10px;
     object-fit: cover;
   }
-  .galeria-title, .ciudad-title, .p-ciudad, .titulos, .contacto {
+  .galeria-title,
+  .ciudad-title,
+  .p-ciudad,
+  .titulos,
+  .contacto,
+  .aqua {
     font-size: 1rem;
     font-weight: regular;
     text-align: center;
@@ -67,17 +78,22 @@
   }
 }
 .pic-container {
+  max-width: min-content;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.pic-container img {
-  width: 400px;
-  height: 400px;
-}
-.pic-container img:hover {
+.pic-container:hover {
   filter: grayscale(50%);
 }
 
+@media (max-width: 1200px) {
+  .pic-container {
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+  }
+}
 header .navbar {
   background-image: linear-gradient(#8CC0DE, #b5cede);
   display: flex;
@@ -146,6 +162,7 @@ body main .como-moverse {
 body main h2 {
   color: #FF6969;
   font-size: 1.5em;
+  margin: 20px;
 }
 body main p {
   color: #8CC0DE;
@@ -162,23 +179,20 @@ body main p a:hover {
   cursor: pointer;
 }
 body main .pic-container {
-  margin: 20px;
   display: flex;
-  flex-direction: row-reverse;
-  flex: 1;
   gap: 3em;
-  margin: 2em;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 body main .pic-container img {
-  width: 400px;
-  height: 400px;
+  max-width: 350px;
+  border-radius: 5px;
 }
 body main .pic-container img:hover {
-  filter: grayscale(50%);
+  transform: scale(1.1);
 }
 body main .formulario .contacto {
   font-size: 1.5rem;
+  margin: 30px;
 }
 body main .formulario .form {
   margin: 0 auto;
@@ -304,6 +318,7 @@ body .contenedor-mayor .contenedor-padre .foto-item {
   width: 500px;
   height: 700px;
   object-fit: cover;
+  border-radius: 5px;
 }
 body .fotos-cope {
   display: flex;
@@ -317,6 +332,10 @@ body .fotos-cope .noche {
   width: 380px;
   height: 350px;
   margin-left: 85px;
+  border-radius: 5px;
+}
+body .fotos-cope .noche:hover {
+  transform: scale(1.1);
 }
 body section .logos {
   display: flex;
@@ -363,6 +382,13 @@ body section .contenedor-ciudad div {
 body section .contenedor-ciudad div .foto-ciudad {
   width: 500px;
   height: 500px;
+}
+body section .contenedor-ciudad div .foto-ciudad:hover {
+  transform: scale(1.2);
+}
+body .medios-transporte {
+  max-width: 80vw;
+  margin: auto;
 }
 
 footer {

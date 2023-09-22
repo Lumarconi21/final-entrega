@@ -1,100 +1,108 @@
+//Nav Bootstrap//
 @media screen and (max-width: 992px) {
-    .menu-top {
-        gap: 0;
-        font-size: 0.8em;
-    }
-
+  .menu-top {
+    gap: 0;
+    font-size: 0.8em;
+  }
 }
 
+//Mobile//
 @media screen and (max-width: 600px) {
-    .formulario{
-        text-wrap: balance;
-        max-width: 100vw;
-        margin:auto;
-        .form{
-            max-width: 90%;
-        }   
+  .contenedor-texto {
+    .titulos {
+      .info {
+        text-align: justify;
+        margin: auto;
+      }
+    }
+  }
+  .fotos-cope {
+    flex-direction: column;
+  }
+  .formulario {
+    text-wrap: balance;
+    max-width: 100vw;
+    margin: auto;
+    .form {
+      max-width: 90%;
+    }
+  }
+  .contenedor-galeria {
+    display: flex !important;
+    flex-direction: column;
+
+    .img-item {
+      img {
+        @include sizes(100%, 100%);
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .galeria-title,
+  .ciudad-title,
+  .p-ciudad,
+  .titulos,
+  .contacto,
+  .aqua {
+    font-size: 1rem;
+    font-weight: regular;
+    text-align: center;
+  }
+
+  .p-ciudad {
+    text-align: left;
+  }
+
+  .info {
+    font-size: 0.7rem;
+    color: $color-coral;
+    text-align: center;
+  }
+
+  .foto-item {
+    width: 150px;
+    height: 200px;
+  }
+  .texto-item {
+    h2 {
+      font-size: 1em;
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+
+    .foto-ciudad {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .contenedor-ciudad {
+    display: block;
+
+    .info {
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    .foto-ciudad {
+      display: none;
+    }
+  }
 }
-    .contenedor-galeria {
-        display: flex !important;
-        flex-direction: column;
-
-
-        .img-item {
-            img {
-                @include sizes(100%, 100%);
-                border-radius: 10px;
-                object-fit: cover;
-            }
-        }
-
-
-    }
-
-
-        .galeria-title, .ciudad-title, .p-ciudad, .titulos, .contacto {
-            font-size: 1rem;
-            font-weight: regular;
-            text-align: center;
-        }
-
-
-        .p-ciudad {
-            text-align: left;
-        }
-
-        .info {
-            font-size: 0.7rem;
-            color: $color-coral;
-            text-align: center;
-        }
-
-        .foto-item{
-            width: 150px;
-            height: 200px;
-        
-        }
-        .texto-item {
-            h2 {
-                font-size: 1em;
-            }
-
-            p {
-                font-size: 0.8em;
-            }
-
-            .foto-ciudad {
-                width: 200px;
-                height: 200px;
-            }
-        }
-
-        .contenedor-ciudad {
-            display: block;
-
-            .info {
-                font-size: 15px;
-                text-align: justify;
-            }
-
-            .foto-ciudad {
-                display: none;
-            }
-        }
-        
-
-    }
-    .pic-container {
-        display: flex;
-        flex-direction: column;
-       
-
-        img {
-
-            @include sizes(400px, 400px);
-
-            &:hover {
-                filter: grayscale(50%)
-            }
-        }
-    }
+.pic-container {
+  max-width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+//Tablet//
+@media (max-width: 1200px) {
+  .pic-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
