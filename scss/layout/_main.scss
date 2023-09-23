@@ -32,8 +32,6 @@ body {
         @include sizes(98%, 500px);
         object-fit: cover;
         border-radius: 10px;
-        margin: 20px 10px;
-        padding: 10px 5px;
       }
     }
 
@@ -69,13 +67,14 @@ body {
     p {
       color: $color-celeste;
       font-size: 20px;
-      padding: 30px;
+      padding: 20px;
       margin: 0px, 50px;
 
       a {
         text-decoration: underline;
         color: $color-coral;
         font-weight: bold;
+
         &:hover {
           cursor: pointer;
         }
@@ -85,11 +84,15 @@ body {
     .pic-container {
       display: flex;
       gap: 3em;
-      justify-content: center;
+      justify-content: space-evenly;
 
       img {
-        max-width: 350px;
+        max-width: 300px;
         border-radius: 5px;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
 
@@ -242,116 +245,117 @@ body {
       align-items: center;
       height: 100%;
 
-      .contenedor-texto {
-        margin: 20px;
-
-        .titulos {
-          @extend .franco;
-          color: $color-coral;
-          margin-top: 30px;
-        }
-
-        .info {
-          color: $color-celeste;
-          font-size: 1.3rem;
-          margin: 10px;
-        }
+      .titulos {
+        @extend .franco;
+        color: $color-coral;
+        margin-top: 30px;
       }
 
-      .foto-item {
-        @include sizes(500px, 700px);
-        object-fit: cover;
-        border-radius: 5px;
-        &:hover {
-          transform: scale(1.1);
-        }
+      .info {
+        color: $color-celeste;
+        font-size: 1.3rem;
+        margin: 10px;
       }
     }
-  }
 
-  // Fotos bottom index //
-  .fotos-cope {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    flex-wrap: wrap;
-    gap: 1rem;
-    opacity: 0.9;
-
-    .noche {
-      @include sizes(380px, 350px);
-      margin-left: 85px;
+    .foto-item {
+      @include sizes(500px, 700px);
+      object-fit: cover;
       border-radius: 5px;
+
       &:hover {
         transform: scale(1.1);
       }
     }
   }
+}
 
-  //Logos redes sociales en Contacto//
-  section {
-    .logos {
+// Fotos bottom index //
+.fotos-cope {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  opacity: 0.9;
+
+  .noche {
+    @include sizes(380px, 350px);
+    margin: auto;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+//Logos redes sociales en Contacto//
+section {
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 30px;
+
+    a {
+      width: 50px;
+
+      img {
+        object-fit: cover;
+        margin: 15px;
+        width: 100%;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  //Contenido section de La Ciudad//
+
+  .contenedor-ciudad {
+    @include columna-flex;
+
+    h2 {
+      display: block;
+      font-size: 2em;
+      color: $color-coral;
+      margin-top: 40px;
+      @extend .franco;
+    }
+
+    .texto-item {
       display: flex;
       justify-content: center;
-      gap: 5%;
-      margin-top: 30px;
 
-      a {
-        width: 50px;
-
-        img {
-          object-fit: cover;
-          margin: 15px;
-          width: 100%;
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
+      .info {
+        color: $color-celeste;
+        font-size: 1.2em;
+        margin: 20px;
       }
     }
 
-    //Contenido section de La Ciudad//
+    div {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
 
-    .contenedor-ciudad {
-      @include columna-flex;
+      .foto-ciudad {
+        @include sizes(500px, 500px);
+        border-radius: 5px;
 
-      h2 {
-        display: block;
-        font-size: 2em;
-        color: $color-coral;
-        margin-top: 40px;
-        @extend .franco;
-      }
-
-      .texto-item {
-        display: flex;
-        justify-content: center;
-
-        .info {
-          color: $color-celeste;
-          font-size: 1.2em;
-          margin: 20px;
-        }
-      }
-
-      div {
-        display: flex;
-        justify-content: center;
-        margin: 30px;
-
-        .foto-ciudad {
-          @include sizes(500px, 500px);
-          border-radius: 5px;
-          &:hover {
-            transform: scale(1.2);
-          }
+        &:hover {
+          transform: scale(1.2);
         }
       }
     }
   }
-  //Main en Como Moverse//
-  .medios-transporte {
-    max-width: 80vw;
-    margin: auto;
-  }
+}
+
+//Main en Como Moverse//
+.medios-transporte {
+  max-width: 80vw;
+  margin: auto;
 }

@@ -8,6 +8,10 @@
 
 //Mobile//
 @media screen and (max-width: 600px) {
+  .pic-container {
+    flex-direction: column;
+    align-items: center;
+  }
   .contenedor-texto {
     .titulos {
       .info {
@@ -62,8 +66,8 @@
   }
 
   .foto-item {
-    width: 150px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 350px;
   }
   .texto-item {
     h2 {
@@ -93,16 +97,10 @@
     }
   }
 }
-.pic-container {
-  max-width: min-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-//Tablet//
-@media (max-width: 1200px) {
+
+@media screen and (max-width: 1200px) {
   .pic-container {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
